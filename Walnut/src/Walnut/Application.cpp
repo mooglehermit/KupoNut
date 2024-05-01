@@ -340,7 +340,7 @@ static void FrameRender(ImGui_ImplVulkanH_Window* wd, ImDrawData* draw_data)
 		VkPipelineStageFlags wait_stage = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
 		VkSubmitInfo info = {};
 		info.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
-		info.waitSemaphoreCount = 1;
+		info.waitSemaphoreCount =  1;
 		info.pWaitSemaphores = &image_acquired_semaphore;
 		info.pWaitDstStageMask = &wait_stage;
 		info.commandBufferCount = 1;
